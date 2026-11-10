@@ -1,0 +1,19 @@
+version: 0.2
+        
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - npm install
+    
+  build:
+    commands:
+      - npm run build
+    finally:
+      - "echo build completed successfully!!"
+  
+artifacts:
+  base-directory: dist/react-string-project
+  files:
+    - '**/*'
